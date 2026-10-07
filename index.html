@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AITools Zone - Discover the Best AI Tools</title>
+  <meta name="description" content="Discover useful AI tools for writing, images, videos, coding and productivity.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #080b14;
+      color: white;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #202638;
+      background: #0b0f1c;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #7c5cff;
+    }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    nav a:hover {
+      color: #8b72ff;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px 60px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 7vw, 70px);
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: #7c5cff;
+    }
+
+    .hero p {
+      color: #aeb5c7;
+      max-width: 650px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    .search {
+      margin: 30px auto;
+      max-width: 600px;
+    }
+
+    .search input {
+      width: 100%;
+      padding: 16px 20px;
+      border-radius: 12px;
+      border: 1px solid #30374d;
+      background: #111624;
+      color: white;
+      outline: none;
+      font-size: 16px;
+    }
+
+    .categories {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px auto 45px;
+      padding: 0 20px;
+    }
+
+    .category {
+      border: 1px solid #30374d;
+      background: #111624;
+      color: #ccc;
+      padding: 9px 16px;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    .category:hover,
+    .category.active {
+      background: #7c5cff;
+      color: white;
+      border-color: #7c5cff;
+    }
+
+    .container {
+      width: 86%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      margin-bottom: 25px;
+      font-size: 28px;
+    }
+
+    .tools {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding-bottom: 70px;
+    }
+
+    .card {
+      background: #101522;
+      border: 1px solid #222a3d;
+      border-radius: 18px;
+      padding: 25px;
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #7c5cff;
+    }
+
+    .icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #aeb5c7;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      color: #b7aaff;
+      background: #1a1730;
+      padding: 5px 10px;
+      border-radius: 20px;
+      margin-bottom: 15px;
+    }
+
+    .visit {
+      display: inline-block;
+      background: #7c5cff;
+      color: white;
+      text-decoration: none;
+      padding: 10px 17px;
+      border-radius: 9px;
+      font-size: 14px;
+    }
+
+    .visit:hover {
+      background: #6847f5;
+    }
+
+    .about {
+      background: #0e1320;
+      border-top: 1px solid #202638;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .about p {
+      color: #aeb5c7;
+      max-width: 700px;
+      margin: 15px auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #777f94;
+      border-top: 1px solid #202638;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 16px 5%;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 55px;
+      }
+
+      .container {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">AI<span>Tools</span> Zone</div>
+
+    <nav>
+      <a href="#tools">Tools</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+
+  <section class="hero">
+
+    <h1>Discover the Best <span>AI Tools</span></h1>
+
+    <p>
+      Explore useful AI tools for writing, images, videos, coding,
+      productivity and more — all in one place.
+    </p>
+
+    <div class="search">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="🔍 Search AI tools..."
+        onkeyup="searchTools()"
+      >
+    </div>
+
+  </section>
+
+
+  <div class="categories">
+
+    <button class="category active" onclick="filterTools('all', this)">
+      All
+    </button>
+
+    <button class="category" onclick="filterTools('writing', this)">
+      ✍️ Writing
+    </button>
+
+    <button class="category" onclick="filterTools('image', this)">
+      🎨 Image
+    </button>
+
+    <button class="category" onclick="filterTools('video', this)">
+      🎬 Video
+    </button>
+
+    <button class="category" onclick="filterTools('coding', this)">
+      💻 Coding
+    </button>
+
+    <button class="category" onclick="filterTools('productivity', this)">
+      ⚡ Productivity
+    </button>
+
+  </div>
+
+
+  <main class="container" id="tools">
+
+    <h2 class="section-title">🔥 Popular AI Tools</h2>
+
+    <div class="tools" id="toolList">
+
+
+      <div class="card" data-category="writing">
+
+        <div class="icon">🤖</div>
+
+        <span class="tag">Writing</span>
+
+        <h3>ChatGPT</h3>
+
+        <p>
+          AI assistant for writing, learning, brainstorming and many other tasks.
+        </p>
+
+        <a
+          class="visit"
+          href="https://chatgpt.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Tool →
+        </a>
+
+      </div>
+
+
+      <div class="card" data-category="image">
+
+        <div class="icon">🎨</div>
+
+        <span class="tag">Image</span>
+
+        <h3>Adobe Firefly</h3>
+
+        <p>
+          Create and edit images using generative AI.
+        </p>
+
+        <a
+          class="visit"
+          href="https://firefly.adobe.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Tool →
+        </a>
+
+      </div>
+
+
+      <div class="card" data-category="video">
+
+        <div class="icon">🎬</div>
+
+        <span class="tag">Video</span>
+
+        <h3>CapCut</h3>
+
+        <p>
+          AI-powered video editing and creative tools.
+        </p>
+
+        <a
+          class="visit"
+          href="https://www.capcut.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Tool →
+        </a>
+
+      </div>
+
+
+      <div class="card" data-category="coding">
+
+        <div class="icon">💻</div>
+
+        <span class="tag">Coding</span>
+
+        <h3>GitHub Copilot</h3>
+
+        <p>
+          AI-powered coding assistance for developers.
+        </p>
+
+        <a
+          class="visit"
+          href="https://github.com/features/copilot"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Tool →
+        </a>
+
+      </div>
+
+
+      <div class="card" data-category="productivity">
+
+        <div class="icon">⚡</div>
+
+        <span class="tag">Productivity</span>
+
+        <h3>Notion AI</h3>
+
+        <p>
+          AI features for notes, writing, planning and productivity.
+        </p>
+
+        <a
+          class="visit"
+          href="https://www.notion.com/product/ai"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Tool →
+        </a>
+
+      </div>
+
+
+      <div class="card" data-category="writing">
+
+        <div class="icon">✍️</div>
+
+        <span class="tag">Writing</span>
+
+        <h3>Grammarly</h3>
+
+        <p>
+          AI writing assistance for grammar, clarity and communication.
+        </p>
+
+        <a
+          class="visit"
+          href="https://www.grammarly.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Tool →
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </main>
+
+
+  <section class="about" id="about">
+
+    <h2>About AITools Zone</h2>
+
+    <p>
+      AITools Zone helps you discover useful artificial intelligence
+      tools for creativity, productivity, writing, images, videos and coding.
+    </p>
+
+  </section>
+
+
+  <footer>
+
+    © 2026 AITools Zone • All rights reserved.
+
+  </footer>
+
+
+  <script>
+
+    function filterTools(category, button) {
+
+      const cards = document.querySelectorAll(".card");
+      const buttons = document.querySelectorAll(".category");
+
+      buttons.forEach(btn => {
+        btn.classList.remove("active");
+      });
+
+      button.classList.add("active");
+
+      cards.forEach(card => {
+
+        if (category === "all" ||
+            card.dataset.category === category) {
+
+          card.style.display = "block";
+
+        } else {
+
+          card.style.display = "none";
+
+        }
+
+      });
+
+    }
+
+
+    function searchTools() {
+
+      const search =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+      const cards =
+        document.querySelectorAll(".card");
+
+      cards.forEach(card => {
+
+        const text =
+          card.innerText.toLowerCase();
+
+        if (text.includes(search)) {
+
+          card.style.display = "block";
+
+        } else {
+
+          card.style.display = "none";
+
+        }
+
+      });
+
+    }
+
+  </script>
+
+</body>
+</html>
