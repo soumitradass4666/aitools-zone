@@ -1,17 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AITools Zone - Best AI Tools</title>
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>AITools Zone | Best AI Tools for Writing, Image, Video & Coding</title>
+
+<meta name="description"
+content="Discover the best AI tools for writing, image generation, video editing, coding, research and productivity. Explore useful AI tools in one place.">
+
+<meta name="keywords"
+content="AI tools, best AI tools, free AI tools, AI website, AI writing tools, AI image generator, AI video tools, AI coding tools">
+
+<meta name="robots" content="index, follow">
+
+<meta name="author" content="AITools Zone">
+
+<link rel="canonical"
+href="https://soumitradass4666.github.io/aitools-zone/">
+
+<!-- Social sharing -->
+
+<meta property="og:title"
+content="AITools Zone | Discover the Best AI Tools">
+
+<meta property="og:description"
+content="Explore useful AI tools for writing, images, video, coding, research and productivity.">
+
+<meta property="og:type"
+content="website">
+
+<meta property="og:url"
+content="https://soumitradass4666.github.io/aitools-zone/">
+
+<!-- Twitter -->
+
+<meta name="twitter:card"
+content="summary">
+
+<meta name="twitter:title"
+content="AITools Zone">
+
+<meta name="twitter:description"
+content="Discover useful AI tools in one place.">
+
+
+<!-- Structured Data -->
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"AITools Zone",
+  "url":"https://soumitradass4666.github.io/aitools-zone/",
+  "description":"Discover useful AI tools for writing, images, video, coding, research and productivity."
+}
+</script>
+
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
 
 body{
 font-family:Arial,sans-serif;
 background:#08080c;
-color:white;
+color:#fff;
 line-height:1.5;
 }
 
@@ -30,7 +91,8 @@ font-size:22px;
 font-weight:bold;
 }
 
-.logo span,.hero h1 span{
+.logo span,
+.hero h1 span{
 color:#9d7cff;
 }
 
@@ -40,13 +102,13 @@ padding:70px 20px 40px;
 }
 
 .hero h1{
-font-size:clamp(40px,8vw,65px);
+font-size:clamp(38px,8vw,65px);
 margin-bottom:15px;
 }
 
 .hero p{
 color:#999;
-max-width:600px;
+max-width:650px;
 margin:auto;
 }
 
@@ -61,7 +123,7 @@ padding:16px;
 border-radius:14px;
 border:1px solid #333;
 background:#111118;
-color:white;
+color:#fff;
 font-size:16px;
 outline:none;
 }
@@ -88,7 +150,7 @@ cursor:pointer;
 .categories button.active,
 .categories button:hover{
 background:#7655e8;
-color:white;
+color:#fff;
 border-color:#7655e8;
 }
 
@@ -97,7 +159,8 @@ max-width:1100px;
 margin:auto;
 padding:10px 20px 70px;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+grid-template-columns:
+repeat(auto-fit,minmax(240px,1fr));
 gap:16px;
 }
 
@@ -147,7 +210,7 @@ padding:10px;
 text-align:center;
 border-radius:9px;
 background:#7655e8;
-color:white;
+color:#fff;
 text-decoration:none;
 }
 
@@ -171,192 +234,549 @@ color:#666;
 font-size:13px;
 }
 
-.hide{display:none}
+.hide{
+display:none;
+}
 
 @media(max-width:600px){
-.tools{grid-template-columns:1fr}
-.hero{padding-top:50px}
+
+.tools{
+grid-template-columns:1fr;
 }
+
+.hero{
+padding-top:50px;
+}
+
+}
+
 </style>
+
 </head>
+
 
 <body>
 
+
 <header>
-<div class="logo">AI<span>Tools</span> Zone</div>
+
+<div class="logo">
+AI<span>Tools</span> Zone
+</div>
+
 </header>
 
+
+<main>
+
+
 <section class="hero">
-<h1>Discover <span>AI Tools</span></h1>
-<p>Find useful AI tools for writing, images, video, coding, research and productivity.</p>
+
+<h1>
+Discover the
+<span>Best AI Tools</span>
+</h1>
+
+<p>
+Explore useful AI tools for writing,
+images, video, coding, research
+and productivity.
+</p>
 
 <div class="search">
-<input id="search" type="text"
+
+<input
+id="search"
+type="search"
+aria-label="Search AI tools"
 placeholder="Search AI tools..."
 oninput="searchTools()">
+
 </div>
+
 </section>
 
-<div class="categories">
 
-<button class="active" onclick="filterTools('all',this)">All</button>
-<button onclick="filterTools('writing',this)">✍️ Writing</button>
-<button onclick="filterTools('image',this)">🎨 Image</button>
-<button onclick="filterTools('video',this)">🎬 Video</button>
-<button onclick="filterTools('coding',this)">💻 Coding</button>
-<button onclick="filterTools('research',this)">🔎 Research</button>
-<button onclick="filterTools('productivity',this)">⚡ Productivity</button>
+<nav class="categories"
+aria-label="AI tool categories">
 
-</div>
+<button
+class="active"
+onclick="filterTools('all',this)">
+All
+</button>
 
-<section class="tools" id="tools">
+<button
+onclick="filterTools('writing',this)">
+✍️ Writing
+</button>
 
-<div class="card" data-cat="writing">
+<button
+onclick="filterTools('image',this)">
+🎨 Image
+</button>
+
+<button
+onclick="filterTools('video',this)">
+🎬 Video
+</button>
+
+<button
+onclick="filterTools('coding',this)">
+💻 Coding
+</button>
+
+<button
+onclick="filterTools('research',this)">
+🔎 Research
+</button>
+
+<button
+onclick="filterTools('productivity',this)">
+⚡ Productivity
+</button>
+
+</nav>
+
+
+<section
+class="tools"
+id="tools"
+aria-label="AI tools">
+
+
+<!-- ChatGPT -->
+
+<article
+class="card"
+data-cat="writing">
+
 <div class="icon">🤖</div>
+
 <h2>ChatGPT</h2>
-<p>AI assistant for writing, learning, brainstorming and coding.</p>
-<span class="tag">WRITING</span>
-<a class="visit" href="https://chatgpt.com/" target="_blank">Visit →</a>
-</div>
 
-<div class="card" data-cat="writing">
+<p>
+AI assistant for writing,
+learning, brainstorming and coding.
+</p>
+
+<span class="tag">WRITING</span>
+
+<a
+class="visit"
+href="https://chatgpt.com/"
+target="_blank"
+rel="noopener noreferrer">
+Visit Tool →
+</a>
+
+</article>
+
+
+<!-- Claude -->
+
+<article
+class="card"
+data-cat="writing">
+
 <div class="icon">🧠</div>
+
 <h2>Claude</h2>
-<p>AI assistant for writing, analysis, reasoning and documents.</p>
-<span class="tag">WRITING</span>
-<a class="visit" href="https://claude.ai/" target="_blank">Visit →</a>
-</div>
 
-<div class="card" data-cat="writing">
+<p>
+AI assistant for writing,
+reasoning, analysis and documents.
+</p>
+
+<span class="tag">WRITING</span>
+
+<a
+class="visit"
+href="https://claude.ai/"
+target="_blank"
+rel="noopener noreferrer">
+Visit Tool →
+</a>
+
+</article>
+
+
+<!-- Gemini -->
+
+<article
+class="card"
+data-cat="writing">
+
 <div class="icon">✨</div>
+
 <h2>Gemini</h2>
-<p>Google AI assistant for writing, learning and brainstorming.</p>
+
+<p>
+Google AI assistant for writing,
+learning and brainstorming.
+</p>
+
 <span class="tag">WRITING</span>
-<a class="visit" href="https://gemini.google.com/" target="_blank">Visit →</a>
-</div>
 
-<div class="card" data-cat="image">
+<a
+class="visit"
+href="https://gemini.google.com/"
+target="_blank"
+rel="noopener noreferrer">
+Visit Tool →
+</a>
+
+</article>
+
+
+<!-- Firefly -->
+
+<article
+class="card"
+data-cat="image">
+
 <div class="icon">🎨</div>
+
 <h2>Adobe Firefly</h2>
-<p>Create and edit images with generative AI.</p>
-<span class="tag">IMAGE</span>
-<a class="visit" href="https://firefly.adobe.com/" target="_blank">Visit →</a>
-</div>
 
-<div class="card" data-cat="image">
+<p>
+Create and edit images
+with generative AI.
+</p>
+
+<span class="tag">IMAGE</span>
+
+<a
+class="visit"
+href="https://firefly.adobe.com/"
+target="_blank"
+rel="noopener noreferrer">
+Visit Tool →
+</a>
+
+</article>
+
+
+<!-- Leonardo -->
+
+<article
+class="card"
+data-cat="image">
+
 <div class="icon">🌌</div>
+
 <h2>Leonardo AI</h2>
-<p>Create AI images, artwork and visual assets.</p>
+
+<p>
+Create AI images, artwork
+and visual assets.
+</p>
+
 <span class="tag">IMAGE</span>
-<a class="visit" href="https://leonardo.ai/" target="_blank">Visit →</a>
-</div>
 
-<div class="card" data-cat="video">
+<a
+class="visit"
+href="https://leonardo.ai/"
+target="_blank"
+rel="noopener noreferrer">
+Visit Tool →
+</a>
+
+</article>
+
+
+<!-- CapCut -->
+
+<article
+class="card"
+data-cat="video">
+
 <div class="icon">🎬</div>
+
 <h2>CapCut</h2>
-<p>AI-powered video editing and creative tools.</p>
-<span class="tag">VIDEO</span>
-<a class="visit" href="https://www.capcut.com/" target="_blank">Visit →</a>
-</div>
 
-<div class="card" data-cat="video">
+<p>
+AI-powered video editing
+and creative tools.
+</p>
+
+<span class="tag">VIDEO</span>
+
+<a
+class="visit"
+href="https://www.capcut.com/"
+target="_blank"
+rel="noopener noreferrer">
+Visit Tool →
+</a>
+
+</article>
+
+
+<!-- Runway -->
+
+<article
+class="card"
+data-cat="video">
+
 <div class="icon">🎥</div>
+
 <h2>Runway</h2>
-<p>AI tools for creating and editing videos.</p>
+
+<p>
+AI tools for creating
+and editing videos.
+</p>
+
 <span class="tag">VIDEO</span>
-<a class="visit" href="https://runwayml.com/" target="_blank">Visit →</a>
-</div>
 
-<div class="card" data-cat="coding">
+<a
+class="visit"
+href="https://runwayml.com/"
+target="_blank"
+rel="noopener noreferrer">
+Visit Tool →
+</a>
+
+</article>
+
+
+<!-- Copilot -->
+
+<article
+class="card"
+data-cat="coding">
+
 <div class="icon">💻</div>
+
 <h2>GitHub Copilot</h2>
-<p>AI coding assistant for developers.</p>
-<span class="tag">CODING</span>
-<a class="visit" href="https://github.com/features/copilot" target="_blank">Visit →</a>
-</div>
 
-<div class="card" data-cat="coding">
+<p>
+AI coding assistant
+for developers.
+</p>
+
+<span class="tag">CODING</span>
+
+<a
+class="visit"
+href="https://github.com/features/copilot"
+target="_blank"
+rel="noopener noreferrer">
+Visit Tool →
+</a>
+
+</article>
+
+
+<!-- Cursor -->
+
+<article
+class="card"
+data-cat="coding">
+
 <div class="icon">⌨️</div>
+
 <h2>Cursor</h2>
-<p>AI-powered code editor for faster development.</p>
+
+<p>
+AI-powered code editor
+for faster development.
+</p>
+
 <span class="tag">CODING</span>
-<a class="visit" href="https://www.cursor.com/" target="_blank">Visit →</a>
-</div>
 
-<div class="card" data-cat="research">
+<a
+class="visit"
+href="https://www.cursor.com/"
+target="_blank"
+rel="noopener noreferrer">
+Visit Tool →
+</a>
+
+</article>
+
+
+<!-- Perplexity -->
+
+<article
+class="card"
+data-cat="research">
+
 <div class="icon">🔎</div>
+
 <h2>Perplexity</h2>
-<p>AI search and research assistant.</p>
+
+<p>
+AI search and research
+assistant.
+</p>
+
 <span class="tag">RESEARCH</span>
-<a class="visit" href="https://www.perplexity.ai/" target="_blank">Visit →</a>
-</div>
 
-<div class="card" data-cat="productivity">
+<a
+class="visit"
+href="https://www.perplexity.ai/"
+target="_blank"
+rel="noopener noreferrer">
+Visit Tool →
+</a>
+
+</article>
+
+
+<!-- Notion -->
+
+<article
+class="card"
+data-cat="productivity">
+
 <div class="icon">📝</div>
-<h2>Notion AI</h2>
-<p>AI workspace for notes, writing and productivity.</p>
-<span class="tag">PRODUCTIVITY</span>
-<a class="visit" href="https://www.notion.so/product/ai" target="_blank">Visit →</a>
-</div>
 
-<div class="card" data-cat="productivity">
-<div class="icon">📚</div>
-<h2>NotebookLM</h2>
-<p>AI research and study assistant for your sources.</p>
+<h2>Notion AI</h2>
+
+<p>
+AI workspace for notes,
+writing and productivity.
+</p>
+
 <span class="tag">PRODUCTIVITY</span>
-<a class="visit" href="https://notebooklm.google/" target="_blank">Visit →</a>
-</div>
+
+<a
+class="visit"
+href="https://www.notion.so/product/ai"
+target="_blank"
+rel="noopener noreferrer">
+Visit Tool →
+</a>
+
+</article>
+
+
+<!-- NotebookLM -->
+
+<article
+class="card"
+data-cat="productivity">
+
+<div class="icon">📚</div>
+
+<h2>NotebookLM</h2>
+
+<p>
+AI research and study
+assistant for your sources.
+</p>
+
+<span class="tag">PRODUCTIVITY</span>
+
+<a
+class="visit"
+href="https://notebooklm.google/"
+target="_blank"
+rel="noopener noreferrer">
+Visit Tool →
+</a>
+
+</article>
+
 
 </section>
+
 
 <section class="about">
+
 <h2>Why AITools Zone?</h2>
-<p>Discover useful AI tools quickly without searching through hundreds of websites.</p>
+
+<p>
+AITools Zone helps you discover useful
+AI tools quickly for creativity,
+learning, work and productivity.
+</p>
+
 </section>
 
+
+</main>
+
+
 <footer>
-© 2026 AITools Zone · Discover. Create. Grow.
+
+© 2026 AITools Zone ·
+Discover. Create. Grow.
+
 </footer>
+
 
 <script>
 
 function filterTools(cat,btn){
 
-document.querySelectorAll(".categories button")
-.forEach(b=>b.classList.remove("active"));
+document
+.querySelectorAll(".categories button")
+.forEach(function(b){
+
+b.classList.remove("active");
+
+});
 
 btn.classList.add("active");
 
-document.getElementById("search").value="";
+document
+.getElementById("search")
+.value="";
 
-document.querySelectorAll(".card").forEach(card=>{
+document
+.querySelectorAll(".card")
+.forEach(function(card){
+
 card.classList.toggle(
 "hide",
-cat!=="all" && card.dataset.cat!==cat
+cat!=="all" &&
+card.dataset.cat!==cat
 );
+
 });
+
 }
+
 
 function searchTools(){
 
-let q=document.getElementById("search")
-.value.toLowerCase();
+let q=document
+.getElementById("search")
+.value
+.toLowerCase();
 
-document.querySelectorAll(".card").forEach(card=>{
+document
+.querySelectorAll(".card")
+.forEach(function(card){
+
 card.classList.toggle(
 "hide",
-!card.innerText.toLowerCase().includes(q)
+!card.innerText
+.toLowerCase()
+.includes(q)
 );
+
 });
 
-document.querySelectorAll(".categories button")
-.forEach(b=>b.classList.remove("active"));
+document
+.querySelectorAll(".categories button")
+.forEach(function(b){
 
-document.querySelector(".categories button")
+b.classList.remove("active");
+
+});
+
+document
+.querySelector(".categories button")
 .classList.add("active");
+
 }
 
 </script>
+
 
 </body>
 </html>
